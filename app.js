@@ -56,6 +56,11 @@ class Calculator {
     this.result = 0;
   }
   add(a, b) {
+    if (b) {
+      this.result = a + b;
+    } else {
+      this.result += a;
+    }
     this.result = a + b;
     return this.result;
   }
@@ -70,6 +75,9 @@ class Calculator {
   divide(a, b) {
     this.result = a / b;
     return this.result;
+  }
+  displayResult() {
+    console.log(`Current Result is: ${this.result}`);
   }
 }
 const myCalculator = new Calculator();
